@@ -1,0 +1,597 @@
+.app-header {
+    display: block
+}
+
+.up-header {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 1.6rem;
+    border-bottom: 2px solid #e2e2e2;
+    height: 64px
+}
+
+.left-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.ham-search {
+    display: flex
+}
+
+.hamburger {
+    padding: .8rem;
+    margin-right: 16px;
+    cursor: pointer
+}
+
+.hamburger:hover {
+    background-color: #f7f7f7;
+    border-radius: 4px
+}
+
+.hamburger span {
+    --background-color: #121212;
+    background-color: #121212;
+    display: block;
+    height: 3px;
+    width: 24px;
+    transition: all .1s ease-in;
+    border-radius: 4px
+}
+
+.hamburger span:nth-child(2) {
+    margin: 5px 0
+}
+
+.search-icon {
+    display: none;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin-top: 3px
+}
+
+.search-icon svg {
+    margin: auto
+}
+
+.search-icon:hover {
+    --background-color: #f7f7f7;
+    cursor: pointer;
+    background: #f7f7f7;
+    border-radius: 50%
+}
+
+.today {
+    display: none;
+    color: #575757;
+    margin-right: 1.6rem;
+    font-size: 1.6rem
+}
+
+.middle-logo {
+    display: block
+}
+
+.middle-logo a {
+    display: block;
+    width: 100%
+}
+
+.palo-logo {
+    height: 37px;
+    max-width: 100%
+}
+
+.right-header {
+    display: none;
+    justify-content: flex-end
+}
+
+.language-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px
+}
+
+.selected-language {
+    display: flex;
+    z-index: 1
+}
+
+.language-s {
+    --title-color: #999;
+    color: #999;
+    font-size: 1.6rem;
+    margin: auto;
+    line-height: 1.33;
+    padding-right: .8rem
+}
+
+.language-name {
+    --title-color: #121212;
+    color: #121212;
+    font-size: 1.6rem;
+    margin: auto;
+    line-height: 1.33;
+    padding-right: .8rem;
+    font-weight: 700
+}
+
+.language-container:hover .language-box {
+    display: block
+}
+
+.language-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 10;
+    --border-color: #ccc;
+    box-shadow: 0 1px .8rem 0 rgba(0, 0, 0, .3);
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 140px;
+    background-color: #fff;
+    padding: 1.2rem 2rem;
+    list-style: none
+}
+
+.language-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+
+.language-box li {
+    display: block;
+    position: relative;
+    padding: 0 .8rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.6rem
+}
+
+.language-box li a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent
+}
+
+.language-box li a label {
+    color: #999;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.language-box li a input {
+    box-sizing: border-box;
+    margin-right: 10px
+}
+
+.arrow-icons {
+    display: block
+}
+
+.arrow-down svg {
+    height: 22px;
+    width: 22px;
+    font-size: 3rem
+}
+
+.arrow-up {
+    display: none
+}
+
+.arrow-up svg {
+    height: 22px;
+    width: 22px;
+    font-size: 3rem
+}
+
+.language-container:hover .arrow-icons .arrow-up {
+    display: block
+}
+
+.language-container:hover .arrow-icons .arrow-down {
+    display: none
+}
+
+.navbar {
+    display: none;
+    width: 100%;
+    list-style-type: none;
+    position: relative;
+    z-index: 8;
+    background-color: #10044a;
+    transition: box-shadow .5s, top .5s
+}
+
+.sticky-palo-navbar {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0/20%)
+}
+
+.navbar-list {
+    --content-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    color: #fff
+}
+
+dl,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.navbar-list li {
+    cursor: pointer;
+    line-height: 1.6
+}
+
+.navbar-list li div {
+    cursor: pointer;
+    line-height: 1.6;
+    display: block
+}
+
+.navbar-list li div a {
+    line-height: 1.78;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-weight: 700;
+    padding: 1.2rem 2.4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    position: relative
+}
+
+.ham-menu {
+    display: none
+}
+
+.ham-menu {
+    z-index: 100;
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.close-button-icon {
+    cursor: pointer;
+    left: 238px;
+    padding: 0 3px 4px 1px;
+    flex: 0;
+    width: 34px;
+    position: fixed;
+    top: 8px;
+    left: 272px;
+    background-color: #121212;
+    border-radius: 50%;
+    line-height: 5px;
+    z-index: 100;
+    box-shadow: 0 3px 12px 0 hsl(0deg 0% 100%/40%)
+}
+
+.ham-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 290px;
+    box-shadow: 0 3px 12px 0 rgb(0 0 0/40%);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    top: 0;
+    border: none;
+    opacity: 1;
+    background-color: #fff
+}
+
+.ham-today {
+    display: block;
+    color: #575757;
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    padding: 2rem 3.2rem 0
+}
+
+.hamburger-search {
+    display: block;
+    background-color: var(--white);
+    margin: 0 16px;
+    padding: 16px 0
+}
+
+.hamburger-search form {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding: 2px
+}
+
+.hamburger-search form label {
+    width: 100%
+}
+
+.hamburger-search form label input {
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-1);
+    border: 0;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+    overflow: visible
+}
+
+.hamburger-search form button {
+    --background-color: #09f;
+    cursor: pointer;
+    padding: .4rem;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #09f;
+    width: 54px;
+    height: 36px;
+    border: none;
+    margin-top: 1px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    text-transform: none;
+    -webkit-appearance: button;
+    opacity: .7
+}
+
+.hamburger-search form button svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+.ham-nav {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    list-style-type: none;
+    left: 0;
+    right: 0;
+    z-index: var(--popup);
+    padding: 5px 2rem
+}
+
+.ham-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    --content-color: #121212;
+    width: 100%;
+    color: #121212
+}
+
+.ham-nav ul li {
+    color: #222;
+    padding: 0;
+    border-bottom: 1px solid #e2e2e2;
+    margin: 0 1.2rem;
+    cursor: pointer;
+    line-height: 1.6
+}
+
+.ham-nav ul li div {
+    color: #222;
+    cursor: pointer;
+    font-size: 1.6rem
+}
+
+.ham-nav ul li:hover div {
+    color: #1a237e;
+    --background-color: #f7f7f7;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    color: #121212;
+    font-weight: 700
+}
+
+.ham-nav ul li div a {
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: .8rem 1.6rem .8rem .4rem;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent
+}
+
+.socials-icons {
+    flex: 1;
+    padding-top: 1.6rem;
+    margin-left: 3.2rem;
+    margin-bottom: 6.4rem
+}
+
+.socials-icons div {
+    --background-color: #fff;
+    background-color: #fff;
+    position: relative
+}
+
+.socials-icons div a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent
+}
+
+.socials-icons div a svg {
+    margin-right: 16px;
+    margin-bottom: 8px
+}
+
+@media(min-width:1024px) {
+    .up-header {
+        display: grid;
+        grid-template-columns: 1fr 260px 1fr;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 10px 1.6rem;
+        border: 0;
+        height: auto
+    }
+    .search-icon {
+        display: flex
+    }
+    .today {
+        display: block
+    }
+    .right-header {
+        display: flex
+    }
+    .middle-logo {
+        display: flex;
+        align-items: flex-end
+    }
+    .palo-logo {
+        height: 65px
+    }
+    .middle-logo a {
+        height: 75px
+    }
+    .hamburger {
+        margin-bottom: 28px;
+        margin-top: 4px
+    }
+    .close-button-icon {
+        display: none;
+        left: 238px
+    }
+    .ham-menu {
+        background-color: transparent
+    }
+    .ham-menu-container {
+        display: none;
+        padding-top: 20px
+    }
+    .ham-nav {
+        padding: 0 4rem 0 2.4rem
+    }
+    .ham-today {
+        display: none
+    }
+    .navbar {
+        display: block
+    }
+    .navbar-list li div a.active {
+        background-color: #7729ee
+    }
+    .navbar-list li div a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background-color: #ff3054
+    }
+    .navbar-list li div a:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background-color: #7729ee
+    }
+    .ham-search {
+        display: none
+    }
+    .hamburger-search {
+        display: none
+    }
+}
+
+.defaultFooter-m__row3 {
+    display: grid;
+    margin: 1.6rem 1.6rem 0;
+    padding-bottom: 2rem
+}
+
+.defaultFooter-m__copyright,
+.defaultFooter-m__powered-by__tRsWG {
+    display: flex;
+    justify-content: center
+}
+
+.defaultFooter-m__copyright {
+    font-size: 1.4rem;
+    align-self: center;
+    color: #999;
+    order: 2
+}
+
+@media only screen and (max-width:875px) {
+    .defaultFooter-m__default-editor {
+        text-align: center;
+        margin-bottom: .8rem;
+        margin-top: .8rem;
+        font-size: 1.4rem;
+        color: #999
+    }
+}
+
+@media(min-width:876px) {
+    .footer {
+        max-width: 1280px;
+        margin: 0 auto .8rem;
+        padding: 0 1.6rem
+    }
+    .defaultFooter-m__row3 {
+        display: flex;
+        justify-content: center;
+        padding-top: 1.2rem
+    }
+    .defaultFooter-m__copyright {
+        order: 0
+    }
+    .defaultFooter-m__copyright:after {
+        content: "|";
+        margin: 0 .5rem;
+        color: #999
+    }
+    .defaultFooter-m__default-editor {
+        font-size: 1.4rem;
+        color: #999
+    }
+}
